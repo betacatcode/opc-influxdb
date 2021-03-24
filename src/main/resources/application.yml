@@ -1,0 +1,30 @@
+#influxDB
+spring:
+  influx:
+    connection:
+      test: 1
+      username: root
+      password: root
+      url: http://127.0.0.1:8086
+      database: testdb
+      retention-policy: default
+      retention-policy-time: 30d
+    batch-options:
+      actions: 10000
+      flush-duration: 1000
+      jitter-duration: 0
+      buffer-limit: 20000
+
+#opc配置
+opc:
+  kep:
+    _host: 127.0.0.1    #电脑IP
+    _domain:             #域，为空就行
+    _user: OPCUser       #电脑上自己建好的用户名
+    _password: 123456    #密码
+    _clsid: 7BC0CC8E-482C-47CA-ABDC-0FE7F9C6E729 #使用KEPServer的配置
+    prefix: 通道 3.设备 1.TAG  #标记前缀
+
+logging:
+  level:
+    org.jinterop : off
