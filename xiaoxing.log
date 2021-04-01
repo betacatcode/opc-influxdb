@@ -1,0 +1,10 @@
+2021-04-01 13:54:17.133  INFO 9792 --- [main] com.xinda.xiaoxing.XiaoxingApplication   : Starting XiaoxingApplication on DESKTOP-G26SONG with PID 9792 (E:\work\xiaoxing\target\classes started by MacheNike in E:\work\xiaoxing)
+2021-04-01 13:54:17.147  INFO 9792 --- [main] com.xinda.xiaoxing.XiaoxingApplication   : No active profile set, falling back to default profiles: default
+2021-04-01 13:54:17.847  INFO 9792 --- [main] c.x.x.config.opc.KepConnectionListener   : =========================连接断开!
+2021-04-01 13:54:19.184  INFO 9792 --- [main] org.openscada.opc.lib.da.Server          : Socket timeout: 0 
+2021-04-01 13:54:20.502  INFO 9792 --- [main] c.x.x.config.opc.KepConnectionListener   : =========================已连接！
+2021-04-01 13:54:20.503  INFO 9792 --- [main] c.x.x.config.opc.KepConnectionListener   : =========================初始化设备
+2021-04-01 13:54:20.925  INFO 9792 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-04-01 13:54:20.941  INFO 9792 --- [main] com.xinda.xiaoxing.XiaoxingApplication   : Started XiaoxingApplication in 4.519 seconds (JVM running for 6.656)
+2021-04-01 13:54:25.346  INFO 9792 --- [scheduling-1] com.xinda.xiaoxing.task.OPCSyncTask      : =========================读取时间:345ms,读取数目:2048
+2021-04-01 13:54:25.505  INFO 9792 --- [scheduling-1] com.xinda.xiaoxing.task.OPCSyncTask      : =========================存储时间:152ms

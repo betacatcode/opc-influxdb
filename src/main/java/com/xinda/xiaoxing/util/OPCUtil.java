@@ -1,6 +1,6 @@
 package com.xinda.xiaoxing.util;
 
-import com.xinda.xiaoxing.entity.pojo.Tag;
+import com.xinda.xiaoxing.entity.domain.Tag;
 import org.jinterop.dcom.common.JIException;
 import org.jinterop.dcom.core.JIVariant;
 import org.openscada.opc.lib.da.Group;

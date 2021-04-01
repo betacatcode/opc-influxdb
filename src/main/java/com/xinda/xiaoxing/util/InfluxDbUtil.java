@@ -1,5 +1,6 @@
 package com.xinda.xiaoxing.util;
 
+import com.xinda.xiaoxing.constant.DataTypeConstant;
 import org.influxdb.BatchOptions;
 import org.influxdb.InfluxDB;
 import org.influxdb.dto.*;
@@ -181,19 +182,19 @@ public class InfluxDbUtil {
                         String typeName = aClass.getSimpleName();
 
                         switch (typeName) {
-                            case "Float": {
+                            case DataTypeConstant.FLOAT: {
                                 field.set(element, Float.valueOf(strVal));
                                 break;
                             }
-                            case "Date": {
+                            case DataTypeConstant.DATE: {
                                 field.set(element, DateTimeUtil.stringToDate(strVal));
                                 break;
                             }
-                            case "Integer": {
+                            case DataTypeConstant.INTEGER: {
                                 field.set(element, Integer.valueOf(strVal));
                                 break;
                             }
-                            case "String": {
+                            case DataTypeConstant.STRING: {
                                 field.set(element, strVal);
                                 break;
                             }

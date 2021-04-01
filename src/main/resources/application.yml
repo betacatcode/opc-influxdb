@@ -3,8 +3,8 @@ spring:
   influx:
     connection:
       test: 1
-      username: root
-      password: root
+      username: admin
+      password: admin
       url: http://127.0.0.1:8086
       database: testdb
       retention-policy: default
@@ -28,3 +28,7 @@ opc:
 logging:
   level:
     org.jinterop : off
+  file:
+    path: ./
+    name: xiaoxing.log
+    max-history: 2

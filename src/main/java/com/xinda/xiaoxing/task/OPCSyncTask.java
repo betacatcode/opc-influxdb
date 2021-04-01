@@ -1,7 +1,7 @@
 package com.xinda.xiaoxing.task;
 
 import com.xinda.xiaoxing.config.opc.KepConnectionListener;
-import com.xinda.xiaoxing.entity.pojo.Tag;
+import com.xinda.xiaoxing.entity.domain.Tag;
 import com.xinda.xiaoxing.util.DateTimeUtil;
 import com.xinda.xiaoxing.util.InfluxDbUtil;
 import com.xinda.xiaoxing.util.OPCUtil;
@@ -55,11 +55,10 @@ public class OPCSyncTask {
     /**
      * 同步kep服务器数据
      */
-//    @Scheduled(cron = "*/5 * * * * ?")
+    @Scheduled(cron = "*/5 * * * * ?")
     public void kepSync() throws JIException {
         if (kepConnectionListener.isConnected()) {
             reconnectionTimes = 0;
-            logger.info("=========================同步OPC数据...");
             long startTime = System.currentTimeMillis();
             List<Tag> tags = OPCUtil.sync(kepServer, kepIdItemMap);
             long endTime = System.currentTimeMillis();
@@ -82,7 +81,8 @@ public class OPCSyncTask {
             endTime = System.currentTimeMillis();
             spend = endTime - startTime;
             logger.info("=========================存储时间:" + spend + "ms");
-        } else {
+        }
+        else {
             reconnectionTimes++;
             logger.info("=========================连接失败,尝试重新连接,重连次数:" + reconnectionTimes);
             try {

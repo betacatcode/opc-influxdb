@@ -1,7 +1,7 @@
 package com.xinda.xiaoxing;
 
-import com.xinda.xiaoxing.entity.pojo.T;
-import com.xinda.xiaoxing.entity.pojo.Tag;
+import com.xinda.xiaoxing.entity.domain.T;
+import com.xinda.xiaoxing.entity.domain.Tag;
 import com.xinda.xiaoxing.util.InfluxDbUtil;
 import org.influxdb.dto.QueryResult;
 import org.junit.jupiter.api.Test;
@@ -9,9 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @SpringBootTest
 class XiaoxingApplicationTests {

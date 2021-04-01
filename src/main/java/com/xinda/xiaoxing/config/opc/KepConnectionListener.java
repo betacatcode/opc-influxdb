@@ -23,8 +23,8 @@ public class KepConnectionListener implements ServerConnectionStateListener {
     Map<String, Item> kepIdItemMap;
     @Value("${opc.kep.prefix}")
     String kepPrefix;
-
     private boolean isConnected;
+
     @Override
     public void connectionStateChanged(boolean b) {
         if (b) {

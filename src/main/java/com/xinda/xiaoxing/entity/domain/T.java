@@ -1,4 +1,4 @@
-package com.xinda.xiaoxing.entity.pojo;
+package com.xinda.xiaoxing.entity.domain;
 
 
 import lombok.Data;
