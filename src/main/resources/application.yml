@@ -1,19 +1,10 @@
-#influxDB
 spring:
-  influx:
-    connection:
-      test: 1
-      username: admin
-      password: admin
-      url: http://127.0.0.1:8086
-      database: testdb
-      retention-policy: default
-      retention-policy-time: 30d
-    batch-options:
-      actions: 10000
-      flush-duration: 1000
-      jitter-duration: 0
-      buffer-limit: 20000
+  influxdb:
+    url: http://localhost:8086
+    username: admin
+    password: 123456
+    database: testdb
+    retention-policy: default
 
 #opc配置
 opc:
