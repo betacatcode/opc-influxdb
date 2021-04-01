@@ -25,9 +25,9 @@ import java.util.concurrent.TimeUnit;
 
 @Component
 @EnableScheduling
-public class OPCSyncTask {
+public class KEPSyncTask {
 
-    Logger logger = LoggerFactory.getLogger(OPCSyncTask.class);
+    Logger logger = LoggerFactory.getLogger(KEPSyncTask.class);
 
     @Autowired
     Server kepServer;
@@ -63,7 +63,7 @@ public class OPCSyncTask {
             List<Tag> tags = OPCUtil.sync(kepServer, kepIdItemMap);
             long endTime = System.currentTimeMillis();
             long spend = endTime - startTime;
-            logger.info("=========================读取时间:" + spend + "ms," + "读取数目:" + tags.size());
+            logger.info(Thread.currentThread().getName()+"=========================读取时间:" + spend + "ms," + "读取数目:" + tags.size());
 
             List<Point> points=new ArrayList<>();
             for (Tag tag : tags) {
@@ -79,7 +79,7 @@ public class OPCSyncTask {
             influxDBTemplate.write(points);
             endTime = System.currentTimeMillis();
             spend = endTime - startTime;
-            logger.info("=========================存储时间:" + spend + "ms");
+            logger.info(Thread.currentThread().getName()+"=========================存储时间:" + spend + "ms");
         }
         else {
             reconnectionTimes++;
